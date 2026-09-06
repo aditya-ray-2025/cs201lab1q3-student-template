@@ -121,8 +121,10 @@ public class DoublyLinkedList<E> {
             if (current.getElement() == null) {
                 current.getPrev().setNext(current.getNext());
                 current.getNext().setPrev(current.getPrev());
+                
                 current.setNext(header.getNext());
                 current.setPrev(header);
+                
                 header.getNext().setPrev(current);
                 header.setNext(current);
             }
