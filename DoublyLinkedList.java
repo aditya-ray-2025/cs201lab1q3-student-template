@@ -115,6 +115,7 @@ public class DoublyLinkedList<E> {
     }
 
     public void group(){
+        
         Node <E> current = header.getNext();
         while (current != trailer) {
             Node <E> next = current.getNext();
