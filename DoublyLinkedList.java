@@ -118,7 +118,7 @@ public class DoublyLinkedList<E> {
         
         Node <E> current = header.getNext();
         while (current != trailer) {
-            Node <E> next = current.getNext();
+
             if (current.getElement() == null) {
                 current.getPrev().setNext(current.getNext());
                 current.getNext().setPrev(current.getPrev());
@@ -127,7 +127,7 @@ public class DoublyLinkedList<E> {
                 header.getNext().setPrev(current);
                 header.setNext(current);
             }
-            current = next;
+            current = current.getNext();
         }
     }
 }
